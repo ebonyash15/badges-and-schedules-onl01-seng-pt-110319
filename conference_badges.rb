@@ -16,5 +16,8 @@ def assign_rooms(members)
   assignments
 end
 def printer(list)
-  list.each {|person| p "#{badges(person)} #{assignments(person)}"}
+  name_output = batch_badge_creator(list)
+  name_output.each {|printing| puts printing}
+  room_output = assign_rooms(list)
+  room_output.each {|rooms| puts rooms}
 end
